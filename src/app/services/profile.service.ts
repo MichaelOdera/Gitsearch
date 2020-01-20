@@ -65,7 +65,7 @@ export class ProfileService {
     return promise 
   }
 
-  //Getting repositories using a promise
+  //Getting repositories using a promise on call back
   getProfileRepos(){
     return this.http.get(environment.apiUrl + this.username + environment.reposApikey).map(response=>response)
     
