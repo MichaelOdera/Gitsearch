@@ -48,15 +48,15 @@ export class ProfileService {
       resolve()
       },
       error=>{
-        this.user.login = "No name found"
+        this.user.login = "Nothing found"
         this.user.name = "Nothing found"
         this.user.followers = 0
-        this.user.repos = "nothing"
+        this.user.repos = "nothing found"
         this.user.avatar_url = "Nothing found"
         this.user.following = 0
         this.user.public_gists = 0
         this.user.public_repos = 0
-        this.user.html_url = "nothing to show"
+        this.user.html_url = "nothing found"
 
         reject(error)
 
