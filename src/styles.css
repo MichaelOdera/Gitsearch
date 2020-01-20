@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-image: url('https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2019/05/best-git-gui-clients.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #D39C9E;
+    padding: 1%;
+    background-attachment: fixed;
+}
+
+.container-fluid{
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color: rgba(0, 0, 0, 0.4);
+}

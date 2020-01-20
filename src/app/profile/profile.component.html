@@ -1,0 +1,56 @@
+<form action='' class='search-form'>
+    <div class="form-group" style="width: 40%;">
+        <input type="text" [(ngModel)]='username' placeholder="Enter the github username" class='form-control' name='username' (keyup)='findProfile()'>
+    </div>
+</form>
+<div class="container-fluid">
+    <ng-progress></ng-progress>
+    
+    <div class='row'>
+        <div class='col-md-5'>
+            <div>
+                <h2>{{user.login}}</h2>
+                <p appUsernamehighlight>Name: {{user.name}}</p>
+            </div>
+        </div>
+
+        <div class="col-md-5">
+            <div class='img-fluid'>
+                <img src="{{user.avatar_url}}" style="width:200px;">
+            </div>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col-md-5'>
+            <h3>The Work Profile Links</h3>
+            <ul class='list-group'>
+                <li class='list-group-item'>Public Gists: {{user.public_gists}}</li>
+                <li class='list-group-item'>Number of Repos: {{user.public_repos}}</li>
+
+            </ul>
+        </div>
+        <div class='col-md-5'>
+            <h4>Followers and Followings</h4>
+            <p>
+                <span class='label-info'>Followings {{user.following}}</span><br>
+                <span class='label-primary'>Followers {{user.followers}}</span><br>
+
+            </p>
+            <a href='{{user.html_url}}' class='btn btn-outline-info' target="_blank">CHECK MAIN PROFILE</a>
+
+        </div>
+    </div>
+    <h1 id="repos">Repositories</h1>
+    <hr>
+    <div class='row'>
+        
+            <div *ngFor='let repo of repos' class='repo col-md-3'>
+                <p class="repo-name" >{{repo.name | casetransform}} </p>
+                <a href='{{repo.html_url}}' class='btn btn-outline-info'>View this project on Github</a>
+                <p>Description: {{repo.description }}</p>
+            </div>
+        
+
+    </div>
+
+</div>

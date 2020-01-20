@@ -1,0 +1,7 @@
+nav{
+    margin-bottom: 1%;
+    align-items:center;
+    z-index:1;
+    position: sticky;
+    top:0;
+}
