@@ -40,7 +40,7 @@ You will need to install npm or nvm latest version. Then you will have to instal
 of HTML5 and CSS3 is also mandatory.
 
 ## Description
-The project above, allows someone to enter the name and a quote, and the author of the quote after which the date entered is also calculated oin order to show how much time has elapsed since the quote was posted. The user can toggle the name of the author, view best voted quote and delete a quote. The user can also cast a vote.
+The project above, allows someone to enter the name and a username, and if the username is on github, the user's profile and the various repositores that are related to hime are then displayed on the screen. The user can use the navabar to go directly to the repositiories of the github search directly on click. The user is also able to go back  and check the user's original page on click through redirection.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
