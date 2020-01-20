@@ -25,7 +25,7 @@ developed on github gh-pages
 
 
 ## Bugs Encountered
-There were no major bugs only that the date pipe had to be modified for it to read correctly
+There were no major bugs only that the tokens had to be hidden and referenced correctly for them to function well after addition to .gitignore
 
 ## Technologies used
 * AngularJS
@@ -34,11 +34,12 @@ There were no major bugs only that the date pipe had to be modified for it to re
 * CSS3
 * Bootstrap
 * Typescript
+* Loaders
 
 
 ## Installation
-You will need to install npm or nvm latest version. Then you will have to install angular and bootstrap in order to run this application. Knwoledge 
-of HTML5 and CSS3 is also mandatory.
+You will need to install npm or nvm latest version. Then you will have to install angular and bootstrap in order to run this application. Knowledge 
+of HTML5 and CSS3 is also mandatory. Your machine should be able tp also run the lates version of npm or nvm.
 
 ## Description
 The project above, allows someone to enter the name and a username, and if the username is on github, the user's profile and the various repositores that are related to hime are then displayed on the screen. The user can use the navabar to go directly to the repositiories of the github search directly on click. The user is also able to go back  and check the user's original page on click through redirection.
