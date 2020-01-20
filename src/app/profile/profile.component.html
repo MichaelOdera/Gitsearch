@@ -9,8 +9,8 @@
     <div class='row'>
         <div class='col-md-5'>
             <div>
-                <h2>{{user.login}}</h2>
-                <p appUsernamehighlight>Name: {{user.name}}</p>
+                <h2>Username: {{user.login}}</h2>
+                <p appUsernamehighlight>Official Name: {{user.name}}</p>
             </div>
         </div>
 
@@ -25,12 +25,12 @@
             <h3>Work Profile Links List</h3>
             <ul class='list-group'>
                 <li class='list-group-item'>Public Gists: {{user.public_gists}}</li>
-                <li class='list-group-item'>Number of Repositories: {{user.public_repos}}</li>
+                <li class='list-group-item'>Number of Repos: {{user.public_repos}}</li>
 
             </ul>
         </div>
         <div class='col-md-5'>
-            <h4>Followers & Followings</h4>
+            <h4>Followers and Followings</h4>
             <p>
                 <span class='label-info'>Followings {{user.following}}</span><br>
                 <span class='label-primary'>Followers {{user.followers}}</span><br>
