@@ -20,6 +20,7 @@ In case of any bugs or improvements, contact me through enmail:michogelira@gmail
 developed on github gh-pages
 
 ## Code Beat Badge
+[![codebeat badge](https://codebeat.co/badges/54df35aa-1d70-40cb-8cb6-21a7570e7217)](https://codebeat.co/projects/github-com-michaelodera-gitsearch-dev)
 
 
 
