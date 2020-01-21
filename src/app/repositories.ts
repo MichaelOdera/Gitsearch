@@ -1,5 +1,5 @@
 export class Repositories {
-    constructor(public repos:any){
+    constructor(public name:string, public description:string){
 
     }
 }

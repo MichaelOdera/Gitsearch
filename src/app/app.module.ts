@@ -15,6 +15,7 @@ import { UsernamehighlightDirective } from './usernamehighlight.directive';
 import { CasetransformPipe } from './casetransform.pipe';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { RepositoriesComponent } from './repositories/repositories.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     UsernamehighlightDirective,
     CasetransformPipe,
     NotFoundComponent,
-    NavbarComponent
+    NavbarComponent,
+    RepositoriesComponent
   ],
   imports: [
     BrowserModule,
