@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { User } from '../user';
+import { Repositories} from '../repositories';
 import 'rxjs/add/operator/map';
 
 @Injectable({
@@ -11,7 +12,10 @@ export class ProfileService {
 
   username:string;
   user:User;
+  repositories:Repositories;
   repos:any;
+
+  reposits:any;
 
   constructor(private http:HttpClient) { 
     console.log("service is ready");
@@ -70,6 +74,32 @@ export class ProfileService {
     return this.http.get(environment.apiUrl + this.username + environment.reposApikey).map(response=>response)
     
     }
+
+  getRepositories(){
+    interface ApiResponse{
+      name:string;
+      description:string;
+    }
+    let promise = new Promise((resolve ,reject)=>{
+      return this.http.get<ApiResponse>(environment.apiUrl + this.username + environment.reposApikey).toPromise().then(response=>{
+        console.log(response)
+        console.log("getting repos");
+        response
+        // this.repositories.name = response.name
+        // this.repositories.description = response.description
+        
+
+        resolve(response)
+      },
+      error=>{
+        this.repositories.name = "No name found"
+        this.repositories.description = "No description available"
+
+        reject(error)
+      })
+    })
+    return promise
+  }
   
 
 
