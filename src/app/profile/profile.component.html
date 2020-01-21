@@ -1,6 +1,7 @@
-<form action='' class='search-form'>
+<form (ngSubmit)='findProfile()' class='search-form' >
     <div class="form-group" style="width: 40%;">
-        <input type="text" [(ngModel)]='username' placeholder="Enter the github username" class='form-control' name='username' (keyup)='findProfile()'>
+        <input type="text" [(ngModel)]='username' placeholder="Enter the github username" class='form-control' name='username'>
+        <button type="submit" class='btn btn-outline-info'>submit</button>
     </div>
 </form>
 <div class="container-fluid">

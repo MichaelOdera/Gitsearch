@@ -26,10 +26,10 @@ export class ProfileService {
       login:string;
       followers:number;
       following:number;
-      avatar_url:string;
       name:string;
       repos:string;
       public_repos:number;
+      avatar_url:string;
       public_gists:number;
       html_url:string;
     }
