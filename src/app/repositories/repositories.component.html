@@ -1,0 +1,10 @@
+<div class='row'>
+    <div *ngFor='let repo of repos' class='repo col-md-3'>
+        <h1>My Title</h1>
+        <p class="repo-name">{{repo.name | casetransform}} </p>
+        <a href='{{repo.html_url}}' class='btn btn-outline-info'>View the project on Github</a>
+        <p>Description: {{repo.description }}</p>
+    </div>
+
+
+</div>
