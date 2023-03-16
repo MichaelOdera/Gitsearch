@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from '../../environments/environment';
+import { environment } from '../../environments/environment.prod';
 import { User } from '../user';
 import { Repositories} from '../repositories';
 import 'rxjs/add/operator/map';
@@ -37,8 +37,8 @@ export class ProfileService {
       public_gists:number;
       html_url:string;
     }
-    let promise = new Promise((resolve, reject)=>{
-      return this.http.get<ApiResponse>(environment.apiUrl + this.username + environment.apikey).toPromise().then(response=>{
+    let promise = new Promise<void>((resolve, reject)=>{
+      return this.http.get<ApiResponse>(environment.apiUrl + this.username ).toPromise().then(response=>{
       this.user.login = response.login
       this.user.name = response.name
       this.user.followers = response.followers
@@ -71,7 +71,7 @@ export class ProfileService {
 
   //Getting repositories using a promise on call back
   getProfileRepos(){
-    return this.http.get(environment.apiUrl + this.username + environment.reposApikey).map(response=>response)
+    return this.http.get(environment.apiUrl + this.username + "/repos").map(response=>response)
     
     }
 
@@ -81,7 +81,7 @@ export class ProfileService {
       description:string;
     }
     let promise = new Promise((resolve ,reject)=>{
-      return this.http.get<ApiResponse>(environment.apiUrl + this.username + environment.reposApikey).toPromise().then(response=>{
+      return this.http.get<ApiResponse>(environment.apiUrl + this.username+"/repos").toPromise().then(response=>{
         console.log(response)
         console.log("getting repos");
         response
